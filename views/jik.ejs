@@ -1,0 +1,52 @@
+<script>
+        // Array of students and teachers
+        var students = ["Student 1", "Student 2", "Student 3", "Student 4", "Student 5", "Student 6", "Student 7"];
+        var teachers = ["Teacher 1", "Teacher 2", "Teacher 3", /* ... */ "Teacher 20"];
+    
+        // Generate student attendance table
+        var studentTable = document.getElementById("studentTable");
+        for (var i = 0; i < students.length; i++) {
+          var row = studentTable.insertRow();
+          row.insertCell(0).innerText = students[i];
+          row.insertCell(1).innerText = "Present";ode
+        }
+    
+        // Generate teacher attendance table
+        var teacherTable = document.getElementById("teacherTable");
+        for (var j = 0; j < teachers.length; j++) {
+          var row = teacherTable.insertRow();
+          row.insertCell(0).innerText = teachers[j];
+          row.insertCell(1).innerText = "Present";
+        }
+    
+        // List absentees for students
+        var studentAbsentees = document.getElementById("studentAbsentees");
+        for (var k = 0; k < students.length; k++) {
+          var listItem = document.createElement("li");
+          listItem.innerText = students[k];
+          studentAbsentees.appendChild(listItem);
+        }
+    
+        // List absentees for teachers
+        var teacherAbsentees = document.getElementById("teacherAbsentees");
+        for (var l = 0; l < teachers.length; l++) {
+          var listItem = document.createElement("li");
+          listItem.innerText = teachers[l];
+          teacherAbsentees.appendChild(listItem);
+        }
+      </script>
+    </body>
+    </html>
+  
+    <%- include("header.ejs") %>
+
+    <!--7 teachers present-->
+    <!--20 students present-->
+
+    <!--section absentees -- students and teachers-->
+
+
+    <!--Attendance page-->
+    <!--Permissions page-->
+  </body>
+</html>

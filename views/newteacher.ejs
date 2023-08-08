@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Staff</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <%- include("header.ejs") %>
+
+    <h2 class="main-h">Add new Staff</h2>
+    <form action="/addStaff" method="POST">
+      <div>
+        <label for="tsc">TSC NO</label>
+        <input type="number" name="tsc" id="tsc" />
+      </div>
+      <div>
+        <label for="name">Full Name</label>
+        <input type="text" name="name" id="name" />
+      </div>
+      <div>
+        <label for="phone">Phone</label>
+        <input type="number" name="phone" id="phone" />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" />
+      </div>
+      <div>
+        <label for="pass">Password</label>
+        <input type="password" name="pass" id="pass" />
+      </div>
+      <div>
+        <label for="role">Role</label>
+        <select name="role" id="role">
+          <option value="teacher">Teacher</option>
+          <option value="classteacher">Class Teacher</option>
+          <option value="security">Security</option>
+          <option value="principal">Principal</option>
+        </select>
+      </div>
+      <div>
+        <input type="submit" value="Add New Staff" />
+      </div>
+    </form>
+    <!-- phone emain password role -->
+  </body>
+</html>

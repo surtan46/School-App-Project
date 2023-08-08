@@ -1,0 +1,65 @@
+body {
+  background-image: url("../images/clss.img.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+img {
+  width: 300px;
+}
+h1 {
+  color: red;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav a {
+  color: red;
+  margin: 0 16px;
+  padding: 10px;
+  background-color: rgba(240, 248, 255, 0.6);
+  text-decoration: none;
+}
+.main-h {
+  text-align: center;
+  color: rgb(209, 13, 13);
+}
+.main-container {
+  max-width: 920px;
+  margin: 10px auto;
+}
+
+.attendance {
+  display: flex;
+  gap: 20px;
+}
+.attendance > div {
+  background-color: rgba(240, 248, 255, 0.4);
+  width: 100%;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+form {
+  max-width: 300px;
+  margin: 0 auto;
+  background-color: rgba(240, 248, 255, 0.4);
+  border-radius: 20px;
+  padding: 25px;
+}

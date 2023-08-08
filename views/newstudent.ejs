@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Student</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <%- include("header.ejs") %>
+
+    <h2 class="main-h">Add new Student</h2>
+    <form action="/addStudent" method="POST">
+      <div>
+        <label for="reg">REG NO</label>
+        <input type="number" name="reg" id="reg" />
+      </div>
+      <div>
+        <label for="name">Full Name</label>
+        <input type="text" name="name" id="name" />
+      </div>
+      <div>
+        <label for="class">Class</label>
+        <select name="class" id="class">
+          <option value="1">Form 1</option>
+          <option value="2">Form 2</option>
+          <option value="3">Form 3</option>
+          <option value="4">Form 4</option>
+        </select>
+      </div>
+
+      <div>
+        <input type="submit" value="Add New Student" />
+      </div>
+    </form>
+    <!-- phone emain password role -->
+    <!-- cors -->
+  </body>
+</html>

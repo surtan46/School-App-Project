@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Permissions</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
+    />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/permission.css" />
+  </head>
+  <body>
+    <%- include("header.ejs") %>
+    <h2 class="main-h">Student permissions</h2>
+
+    <div class="flex">
+      <div class="all-p">
+        <table>
+          <tr>
+            <th>REG No</th>
+            <th>Name</th>
+            <th>Reason</th>
+            <th>Time out</th>
+            <th>Expected Time In</th>
+          </tr>
+          <%permissions.forEach(perm=>{%>
+          <tr>
+            <td><%= perm.reg_no %></td>
+            <td><%= perm.fullname %></td>
+            <td><%= perm.reason %></td>
+            <td><%= perm.time_out %></td>
+            <td><%= perm.expected_time_in %></td>
+          </tr>
+          <% }) %>
+        </table>
+      </div>
+      <div class="new-p"></div>
+      <form action="/studentpermissions" method="POST">
+        <label for="reg">REG NO</label>
+        <select name="reg" id="reg">
+          <option value="">--Choose Name</option>
+          <%numbers.forEach(num=>{%>
+          <option value="<%=num.reg_no%>"><%=num.fullname%></option>
+          <% }) %>
+        </select>
+        <label for="reason">Reason</label>
+        <textarea name="reason" id="reason" cols="30" rows="10"></textarea>
+
+        <label for="timeout">Date&Time Out</label>
+        <input type="datetime-local" name="timeout" id="timeout" />
+
+        <label for="timein">Expected Time In</label>
+        <input type="datetime-local" name="timein" id="timein" />
+
+        <input type="submit" value="Add Permision" />
+      </form>
+    </div>
+  </body>
+</html>

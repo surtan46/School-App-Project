@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <style>
+      .cont {
+        height: 300px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: orangered;
+        flex-direction: column;
+      }
+      .cont a {
+        color: blue;
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <%- include("header.ejs") %>
+    <div class="cont">
+      <h1>404 Page Not Found</h1>
+      <a href="/">home</a>
+    </div>
+  </body>
+</html>
